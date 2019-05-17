@@ -141,8 +141,12 @@ def spamTest():
         docList.append(wordList)
         #fullText.append(wordList)
         classList.append(0)  # 标记正常邮件，0表示正常文件
+
+
+
+
     vocabList = createVocabList(docList)  # 创建词汇表，不重复
-    trainingSet = list(range(50))
+    trainingSet = list(range(100))
     testSet = []  # 创建存储训练集的索引值的列表和测试集的索引值的列表
     for i in range(10):  # 从50个邮件中，随机挑选出40个作为训练集,10个做测试集
         randIndex = int(random.uniform(0, len(trainingSet)))  # 随机选取索索引值
