@@ -103,7 +103,7 @@ import codecs
 import jieba
 import sys
 
-nnn = 200
+nnn = 40
 
 y = 1
 x = 0
@@ -162,8 +162,10 @@ def dect(mail):
     words = get_word(mail)
     # print(words)
     returnVec = [0] * 500
-    p0 = 0.8844221105527639
-    p1 = 0.11557788944723618
+    # p0 = 0.8844221105527639
+    # p1 = 0.11557788944723618
+    p0 = 0.6466165413533834
+    p1 = 0.3533834586466165
     if words == None:
         print("文件无法解码")
     else:
@@ -252,7 +254,7 @@ def get_word(mail):
         #    pass
 
 
-with open('D:\\Emile\\trec06c\\trec06c\\full\\index', 'r') as f:
+with open('D:\\Emile\\trec06p\\trec06p\\full\\index', 'r') as f:
     for line in f:
         # print(line[16:20])
         # print(line[8:20])
